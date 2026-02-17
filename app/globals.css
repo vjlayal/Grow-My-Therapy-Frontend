@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: #fbf6f1;
+  /* Warm cream */
+  color: #212842;
+  /* Deep navy */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-montserrat);
+  font-weight: 1200;
+}
+
+nav a,
+nav button {
+  font-family: var(--font-montserrat);
+  font-weight: 400;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.manufacturing-consent-regular {
+  font-family: "Manufacturing Consent", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
