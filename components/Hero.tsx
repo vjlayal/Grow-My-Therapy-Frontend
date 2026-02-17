@@ -16,7 +16,7 @@ export default function Hero({
       <div className="max-w-50% mx-auto w-full grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
         {/* Left side - Image */}
         <div className="flex justify-center md:justify-start">
-          <div className="relative w-full max-w-[350px] md:max-w-[450px] lg:max-w-[680px] aspect-[9/16] max-h-[1000px]">
+          <div className="relative w-full max-w-[250px] md:max-w-[450px] lg:max-w-[680px] aspect-[9/16] max-h-[1000px]">
             <div className="absolute inset-0 rounded-t-full overflow-hidden">
               <Image
                 src={imageSrc}
@@ -30,7 +30,7 @@ export default function Hero({
         </div>
 
         {/* Right side - Text */}
-        <div className="max-w-50% flex flex-col items-center justify-center space-y-6 md:space-y-8 -mt-[150px] -ml-[150px]">
+        <div className="max-w-50% flex flex-col sm:text-left md:text-left lg:text-left items-center justify-center space-y-6 md:space-y-8">
           <h1 className="text-4xl md:text-5xl lg:text-8xl font-light text-primary-dark leading-tight text-center">
             {heading.split('\n').map((line, i) => (
               <span key={i}>

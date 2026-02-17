@@ -92,7 +92,7 @@ export default function Home() {
           </button>
         </div>
         {/* Right - Image (spans both rows) */}
-        <div className="relative min-h-[950px] md:min-h-screen bg-primary-light row-span-2 order-1 md:order-3">
+        <div className="relative sm:min-h-[350px]  md:min-h-screen bg-primary-light row-span-2 order-1 md:order-3">
           <Image
             src="https://images.pexels.com/photos/8942907/pexels-photo-8942907.jpeg?auto=compress&cs=tinysrgb&w=1920"
             alt="Therapy session - finding balance and peace"
@@ -134,7 +134,7 @@ export default function Home() {
       {/* Support Section - You don't have to do this all alone */}
       <section className="w-full min-h-[950px] grid grid-cols-1 md:grid-cols-2 grid-rows-[1fr_auto]">
         {/* Left - Image (spans both rows) */}
-        <div className="relative min-h-[500px] md:min-h-screen bg-accent row-span-2">
+        <div className="relative sm:min-h-[350px] min-h-[500px] md:min-h-screen bg-accent row-span-2">
           <Image
             src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&h=1000&fit=crop"
             alt="Person looking up thoughtfully"
@@ -232,7 +232,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left - Image */}
           <div className="flex justify-center md:justify-start">
-            <div className="relative w-full max-w-[500px] aspect-[9/16] max-h-[calc(550px*16/9-25px)] ml-10">
+            <div className="relative w-full max-w-[250px] md:max-w-[450px] lg:max-w-[680px] aspect-[9/16] max-h-[950px]">
               <div className="absolute inset-0 rounded-t-full overflow-hidden">
                 <Image
                   src="https://images.pexels.com/photos/5428826/pexels-photo-5428826.jpeg?auto=compress&cs=tinysrgb&w=1200"

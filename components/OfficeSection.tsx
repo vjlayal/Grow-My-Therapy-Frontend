@@ -40,7 +40,7 @@ export default function OfficeSection() {
                     </div>
 
                     {/* Text Column */}
-                    <div className="space-y-10 lg:pl-12">
+                    <div className="space-y-10 lg:pl-12 text-center lg:text-left">
                         <div className="space-y-6">
                             <h3 className="text-3xl md:text-4xl font-light text-[#212842]">
                                 Designed for Comfort & Safety
@@ -56,7 +56,7 @@ export default function OfficeSection() {
                         </div>
 
                         {/* Location Details */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-[#212842]/10">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-[#212842]/10 text-center md:text-left">
                             <div>
                                 <h4 className="text-sm font-semibold text-[#212842] uppercase tracking-wider mb-3">Location</h4>
                                 <p className="text-[#2D3748] font-light">
