@@ -1,3 +1,5 @@
+import AnimationWrapper from './AnimationWrapper';
+
 export default function SocialIcons() {
     const socialLinks = [
         {
@@ -51,26 +53,33 @@ export default function SocialIcons() {
         <section className="w-full h-[300px] bg-white px-8 md:px-16 lg:px-24 py-16 md:py-20">
             <div className="max-w-full mx-auto flex flex-col justify-center items-center">
                 {/* Heading */}
-                <h2 className="text-3xl md:text-5xl lg:text-6xl font-light text-primary-dark pb-8">
-                    Connect With Me
-                </h2>
+                <AnimationWrapper>
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-light text-primary-dark pb-8">
+                        Connect With Me
+                    </h2>
+                </AnimationWrapper>
 
                 {/* Social Icons */}
                 <div className="flex flex-wrap gap-6 items-center">
-                    {socialLinks.map((social) => (
-                        <a
+                    {socialLinks.map((social, index) => (
+                        <AnimationWrapper
                             key={social.name}
-                            href={social.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-3 text-primary-dark hover:text-accent transition-colors duration-300 group"
-                            aria-label={social.name}
+                            delay={index * 0.1}
+                            direction="up"
                         >
-                            <div className="w-12 h-12 rounded-full border-2 border-primary-dark group-hover:border-accent flex items-center justify-center transition-all duration-300">
-                                {social.icon}
-                            </div>
-                            <span className="text-lg font-light">{social.name}</span>
-                        </a>
+                            <a
+                                href={social.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 text-primary-dark hover:text-accent transition-colors duration-300 group"
+                                aria-label={social.name}
+                            >
+                                <div className="w-12 h-12 rounded-full border-2 border-primary-dark group-hover:border-accent flex items-center justify-center transition-all duration-300">
+                                    {social.icon}
+                                </div>
+                                <span className="text-lg font-light">{social.name}</span>
+                            </a>
+                        </AnimationWrapper>
                     ))}
                 </div>
             </div>

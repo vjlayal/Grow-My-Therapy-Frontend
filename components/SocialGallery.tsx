@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import AnimationWrapper from './AnimationWrapper';
 
 export default function SocialGallery() {
     const images = [
@@ -24,24 +25,30 @@ export default function SocialGallery() {
         <section className="w-full bg-white h-[750px] px-8 md:px-16 lg:px-24 py-16 md:py-20">
             <div className="max-w-full mx-auto">
                 {/* Heading */}
-                <h2 className="text-3xl md:text-5xl lg:text-6xl font-light text-primary-dark pb-8 pt-20">
-                    Find me on social.
-                </h2>
+                <AnimationWrapper>
+                    <h2 className="text-3xl md:text-5_xl lg:text-6xl font-light text-primary-dark pb-8 pt-20">
+                        Find me on social.
+                    </h2>
+                </AnimationWrapper>
 
                 {/* Image Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                     {images.map((image, index) => (
-                        <div
+                        <AnimationWrapper
                             key={index}
-                            className="relative aspect-square overflow-hidden"
+                            delay={index * 0.1}
+                            direction="up"
+                            yOffset={30}
                         >
-                            <Image
-                                src={image.src}
-                                alt={image.alt}
-                                fill
-                                className="object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                        </div>
+                            <div className="relative aspect-square overflow-hidden">
+                                <Image
+                                    src={image.src}
+                                    alt={image.alt}
+                                    fill
+                                    className="object-cover hover:scale-105 transition-transform duration-300"
+                                />
+                            </div>
+                        </AnimationWrapper>
                     ))}
                 </div>
             </div>
