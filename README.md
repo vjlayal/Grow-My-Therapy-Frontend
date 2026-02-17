@@ -87,14 +87,6 @@ d:/Grow My Therapy assignment/
 
 ---
 
-## 🔮 Next Steps
-
-- [ ] **Finalize Contact Page**: Complete image replacements and verify map location.
-- [ ] **Font Integration**: Apply Montserrat and Inter weights across all components.
-- [ ] **Image Refresh**: Replace remaining Pexels placeholders with thematic ocean/nature images.
-- [ ] **SEO & Metadata**: Finalize page titles and meta descriptions for all routes.
-
----
 
 ## 📄 License
 
