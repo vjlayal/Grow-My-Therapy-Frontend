@@ -2,7 +2,7 @@
 
 export default function OfficeLocation() {
     return (
-        <section className="w-full bg-primary-dark h-[750px] px-8 md:px-16 lg:px-24 py-16 md:py-20">
+        <section id="office" className="w-full bg-primary-dark h-[750px] px-8 md:px-16 lg:px-24 py-16 md:py-20">
             <div className="max-w-full mx-auto grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                 {/* Left Column - Office Info */}
                 <div className="text-white space-y-8 md:space-y-12 flex flex-col justify-start">

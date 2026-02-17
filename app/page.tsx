@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
+import OfficeSection from '@/components/OfficeSection';
 
 export default function Home() {
   // State for Professional Background accordion
@@ -223,6 +224,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <OfficeSection />
 
       {/* FAQs Section */}
       <section className="w-full min-h-[900px] py-20 px-8 md:px-16 lg:px-24 bg-white">
