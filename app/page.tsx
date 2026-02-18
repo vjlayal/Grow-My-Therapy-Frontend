@@ -258,21 +258,18 @@ export default function Home() {
       <section className="w-full min-h-[900px] py-10  md:py-20 px-4 md:px-16 lg:px-24 bg-white overflow-hidden">
         <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left - Image */}
-            <AnimationWrapper direction="left" duration={1.2} className="w-full">
-              <div className="flex justify-center sm:items-center md:justify-start">
-                  <div className="relative w-full max-w-[250px] md:max-w-[450px] lg:max-w-[680px] aspect-[9/16] max-h-[950px]">
-                    <div className="absolute inset-0 rounded-t-full overflow-hidden">
-                      <Image
-                        src={questionImg}
-                        alt="Peaceful therapy environment"
-                        fill
-                        unoptimized={true}
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
+          <div className="flex justify-center md:justify-start h-full">
+            <AnimationWrapper direction="left" duration={1.2} className="w-full flex justify-center md:justify-start">
+              <div className="relative w-full max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] aspect-[3/4] md:aspect-[9/16] rounded-t-full overflow-hidden shadow-2xl">
+                <Image
+                  src={questionImg}
+                  alt="Peaceful therapy environment"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </AnimationWrapper>
+          </div>
 
           {/* Right - FAQs */}
           <div className="space-y-8">
