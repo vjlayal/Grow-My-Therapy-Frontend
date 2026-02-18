@@ -1,8 +1,30 @@
 # Dr. Maya Reynolds, PsyD - Therapy Website
 
-This project is a professional, modern, and SEO-optimized website for Dr. Maya Reynolds, a licensed clinical psychologist based in Santa Monica, CA. The site is built using Next.js 15, TypeScript, and Tailwind CSS.
+This is a professional, high-performance, and visually stunning website for Dr. Maya Reynolds, a licensed clinical psychologist based in Santa Monica, CA. The site is designed to feel calm, grounding, and professional, reflecting the nature of her therapeutic practice.
 
-## 🚀 Quick Start
+## ✨ Key Features
+
+- **Global Animation System**: Smooth, scroll-triggered entry animations (fade, slide, scale) powered by `framer-motion` for a premium, interactive feel.
+- **Mobile-First Design**: Fully responsive layout optimized for all devices, from narrow smartphones to large desktop displays.
+- **Dynamic Homepage**: Includes core focus areas, professional background, a dedicated "Our Office" section with a curated design, and interactive FAQs.
+- **Specialized Sections**:
+  - **Hero**: Atmospheric entry with arched imagery and elegant typography.
+  - **Office Section**: Showcasing her Santa Monica space with a calming aesthetic.
+  - **Social Feed**: Integrated image gallery and social connection points.
+  - **Booking Integration**: Direct calls-to-action for scheduling consultations.
+- **Performance Optimized**: Built with Next.js 15 for fast loading, SEO benefits, and image optimization.
+
+## 🛠️ Technology Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Icons**: Lucide React / Simple Icons
+
+---
+
+## 🚀 Getting Started
 
 ### 1. Install Dependencies
 ```bash
@@ -28,50 +50,43 @@ npm run start
 ```
 d:/Grow My Therapy assignment/
 │
-├── 🎨 App Directory (Next.js App Router)
+├── 🎨 App Directory
 │   ├── blog/               # Blog listing page and posts
-│   ├── contact/            # Contact page
-│   ├── globals.css         # Global styles, Tailwind, and Fonts
-│   ├── layout.tsx          # Root layout and metadata
-│   └── page.tsx            # Homepage
+│   ├── contact/            # Contact page with Office Location map
+│   ├── globals.css         # Global styles and font configurations
+│   ├── layout.tsx          # Root layout, Navbar, and SEO Metadata
+│   └── page.tsx            # Main Homepage (assembled from components)
 │
 ├── 🧩 Components
-│   ├── Header.tsx          # Navigation header (Sticky/Fixed)
-│   ├── Footer.tsx          # Site footer
-│   ├── Hero.tsx            # Main hero section (Home/Blog)
-│   ├── ContactHero.tsx     # Specialized hero for Contact page
-│   ├── BookingSection.tsx  # Scheduling integration point
-│   ├── OfficeLocation.tsx  # Map and office hours
-│   ├── SocialIcons.tsx     # Social media links
-│   ├── SocialGallery.tsx   # Image grid for social feed
-│   └── ...                 # Other UI components
-│
-├── 📁 Public
-│   └── images/             # Static assets (favicons, local images)
+│   ├── AnimationWrapper.tsx # Core framer-motion utility for entry effects
+│   ├── Header.tsx           # Responsive navigation with mobile menu
+│   ├── Hero.tsx             # Arched Hero section with text & image
+│   ├── OfficeSection.tsx    # "A Calm Space" section with office gallery
+│   ├── BookingSection.tsx   # Ready to start call-to-action
+│   ├── SocialGallery.tsx    # Responsive grid for social media photos
+│   ├── SocialIcons.tsx      # Branded social media links
+│   ├── Footer.tsx           # Global site footer
+│   └── ...                  # Other modular UI sections
 │
 └── ⚙️ Configuration
-    ├── tailwind.config.ts  # Design system (colors, fonts)
-    ├── next.config.js      # Next.js settings
-    └── tsconfig.json       # TypeScript configuration
+    ├── tailwind.config.ts   # Design system (Theme: #212842, #E5E0DA)
+    ├── next.config.js       # Image remote domains and settings
+    └── tsconfig.json        # TypeScript strict-mode config
 ```
 
 ---
 
-## 🎨 Design Specifications
+## 🎨 Design System
 
 ### Color Palette
-- **Primary Dark**: `#212842` (Deep navy/slate)
-- **Primary Light**: `#E5E0DA` / `#FBF6F1` (Warm cream/beige)
-- **Accent**: `#C2BFCB` (Soft purple/gray)
-- **Text**: `#2D3748` (Slate gray)
+- **Primary Dark**: `#212842` (Deep navy - stability and trust)
+- **Primary Light**: `#FBF6F1` (Warm cream - comfort and safety)
+- **Accent**: `#C2BFCB` (Soft lavender gray - elegance)
+- **Text**: `#2D3748` (Slate gray - readability)
 
 ### Typography
-- **Headings**: Montserrat/Inter (Light/Thin weights for an elegant feel)
-- **Body**: Inter (Light/Regular for readability)
-
-### Aesthetics
-- **Shapes**: Circular and arch-shaped image elements for a soft, welcoming feel.
-- **Vibe**: Grounded, calm, professional, and accessible.
+- **Typography**: Montserrat and Inter fonts with light and thin weights (`font-light`) for an airy, premium aesthetic.
+- **Aesthetics**: Arched imagery, circular elements, and generous whitespace for a grounded, calm, and professional user experience.
 
 ---
 
@@ -87,7 +102,6 @@ d:/Grow My Therapy assignment/
 
 ---
 
-
 ## 📄 License
 
-This project is for professional use for Dr. Maya Reynolds.
+This project is the final deliverable for Dr. Maya Reynolds.

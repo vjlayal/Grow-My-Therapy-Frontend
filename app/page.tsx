@@ -1,5 +1,6 @@
 'use client';
 
+import questionImg from '@/public/images/question.jpg';
 import Image from 'next/image';
 import { useState } from 'react';
 import Header from '@/components/Header';
@@ -255,22 +256,23 @@ export default function Home() {
 
       {/* FAQs Section */}
       <section className="w-full min-h-[900px] py-10  md:py-20 px-4 md:px-16 lg:px-24 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left - Image */}
-          <div className="flex justify-center md:justify-start">
-            <AnimationWrapper direction="left" duration={1.2}>
-              <div className="relative w-full max-w-[250px] md:max-w-[450px] lg:max-w-[680px] aspect-[9/16] max-h-[950px]">
-                <div className="absolute inset-0 rounded-t-full overflow-hidden">
-                  <Image
-                    src="https://images.pexels.com/photos/5428826/pexels-photo-5428826.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                    alt="Peaceful therapy environment"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+            <AnimationWrapper direction="left" duration={1.2} className="w-full">
+              <div className="flex justify-center sm:items-center md:justify-start">
+                  <div className="relative w-full max-w-[250px] md:max-w-[450px] lg:max-w-[680px] aspect-[9/16] max-h-[950px]">
+                    <div className="absolute inset-0 rounded-t-full overflow-hidden">
+                      <Image
+                        src={questionImg}
+                        alt="Peaceful therapy environment"
+                        fill
+                        unoptimized={true}
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
               </div>
             </AnimationWrapper>
-          </div>
 
           {/* Right - FAQs */}
           <div className="space-y-8">
