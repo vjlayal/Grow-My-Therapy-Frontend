@@ -13,7 +13,7 @@ export default function Hero({
   subtext = "Therapy for adults in Santa Monica, CA who feel stuck in overthinking, stress, or the effects of past experiences."
 }: HeroProps) {
   return (
-    <section className="w-full min-h-[85vh] mt-[80px] flex items-center px-4 md:px-16 lg:px-24 py-12">
+    <section className="w-full min-h-[85vh] mt-[80px] flex items-center px-4 md:px-16 lg:px-24 pt-12">
       <div className="max-w-full mx-auto w-full grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
         {/* Left side - Image */}
         <div className="flex justify-center md:justify-start">

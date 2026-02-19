@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, Variants } from 'framer-motion';
@@ -21,6 +22,17 @@ export default function Header() {
     visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } }
   };
 
+  const rotateVariants: Variants = {
+    animate: {
+      rotateY: [0, 360],
+      transition: {
+        duration: 7,
+        ease: "linear",
+        repeat: Infinity
+      }
+    }
+  };
+
   const navVariants: Variants = {
     hidden: { opacity: 0, x: 20 },
     visible: (i: number) => ({
@@ -33,26 +45,26 @@ export default function Header() {
   return (
     <header className="w-full py-6 px-4 md:px-16 lg:px-24 absolute top-0 left-0 right-0 z-50 bg-[#FBF6F1] bg-opacity-0">
       <div className="max-w-100% flex justify-between items-center">
-        {/* Mobile Layout: Hamburger left, Title right */}
+        {/* Mobile Layout: Logo left (toggle), Title right */}
         <div className="md:hidden flex items-center justify-between w-full">
-          {/* Hamburger Menu Button */}
+          {/* Logo as Menu Button */}
           <button
             onClick={toggleMenu}
-            className="z-50 w-8 h-8 flex flex-col justify-center items-center gap-1.5 focus:outline-none"
+            className="z-50 focus:outline-none flex items-center justify-center p-1"
             aria-label="Toggle menu"
           >
-            <span
-              className={`w-6 h-0.5 bg-primary-dark transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''
-                }`}
-            ></span>
-            <span
-              className={`w-6 h-0.5 bg-primary-dark transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''
-                }`}
-            ></span>
-            <span
-              className={`w-6 h-0.5 bg-primary-dark transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''
-                }`}
-            ></span>
+            <motion.div
+              variants={rotateVariants}
+              animate="animate"
+              className="w-10 h-10 relative"
+            >
+              <Image
+                src="/images/logo.png"
+                alt="Logo"
+                fill
+                className="object-contain"
+              />
+            </motion.div>
           </button>
 
           {/* Title */}
@@ -62,20 +74,34 @@ export default function Header() {
             variants={logoVariants}
           >
             <Link href="/" className="text-2xl manufacturing-consent-regular text-primary-dark tracking-wide">
-              Dr. Maya Reynolds, PsyD
+              Dr. Maya Reynolds, PsyD.
             </Link>
           </motion.div>
         </div>
 
-        {/* Desktop Layout: Title left, Nav right */}
+        {/* Desktop Layout: Logo + Title left, Nav right */}
         <motion.div
           initial="hidden"
           animate="visible"
           variants={logoVariants}
-          className="w-full hidden md:block"
+          className="hidden md:flex items-center gap-4"
         >
-          <Link href="/" className="text-3xl md:text-4xl manufacturing-consent-regular text-primary-dark tracking-wide">
-            Dr. Maya Reynolds, PsyD
+          <Link href="/" className="flex items-center gap-4">
+            <motion.div
+              variants={rotateVariants}
+              animate="animate"
+              className="w-12 h-12 relative"
+            >
+              <Image
+                src="/images/logo.png"
+                alt="Logo"
+                fill
+                className="object-contain"
+              />
+            </motion.div>
+            <span className="text-3xl md:text-4xl manufacturing-consent-regular text-primary-dark tracking-wide">
+              Dr. Maya Reynolds, PsyD
+            </span>
           </Link>
         </motion.div>
 

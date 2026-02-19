@@ -21,8 +21,11 @@ const coveredByYourGrace = Covered_By_Your_Grace({
 });
 
 export const metadata: Metadata = {
-  title: "Anxiety & Trauma Therapist in Santa Monica, CA | Dr. Maya Reynolds, PsyD",
+  title: "Dr. Maya Reynolds Therapy",
   description: "Dr. Maya Reynolds, PsyD offers therapy for anxiety, trauma, and burnout in Santa Monica, CA. Evidence-based treatment including CBT, EMDR, and mindfulness. In-person & telehealth available.",
+  icons: {
+    icon: "/images/favicon.ico",
+  },
 };
 
 export default function RootLayout({
